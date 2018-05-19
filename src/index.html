@@ -2,22 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>BIOMAR</title>
     <link rel="stylesheet" href="css/main.css">
+
   </head>
   <body>
-    <div class="columns">
-      <div class="column">
-        Static
-      </div>
-      <div class="column">
-         <div id="test"></div>
-      </div>
-   
+    
+    <div id="app">
+      <div id="map"></div> 
+      <div id="panel"></div>
+      <div id="test"></div>
     </div>
-  </body>
 
+  </body>
+  
   <script>
+
   import Vue from 'vue';
   import Test from './test';
 
@@ -25,5 +25,27 @@
 
   app.text = "Electron Forge with Vue.js!";
 
+  function initMap() {
+    var uluru = {lat: -14.000, lng: -37.000};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: uluru,
+      mapTypeId: 'satellite',
+      disableDefaultUI: true,
+      zoomControl: true,
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.LEFT_BOTTOM
+      },
+      scaleControl: true
+    });
+    /*
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+    */
+  }
+
   </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAIWF272fxLuMO1pQcsUkjZYg-fY4FuGg&language=pt&region=BR&callback=initMap" type="text/javascript"></script>
 </html>
