@@ -10,42 +10,28 @@
     
     <div id="app">
       <div id="map"></div> 
-      <div id="panel"></div>
-      <div id="test"></div>
+      <div id="panel">
+        <div class="panel-inside">
+          <div id="test"></div>
+        </div>
+      </div>
+      <div id="gallery"></div>
     </div>
 
   </body>
   
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAIWF272fxLuMO1pQcsUkjZYg-fY4FuGg&language=pt&region=BR" type="text/javascript"></script>
+
   <script>
 
   import Vue from 'vue';
   import Test from './test';
+  import MainApp from './main';
 
-  const app = new Vue(Test).$mount('#test');
+  const app = new Vue(MainApp).$mount('#test');
 
   app.text = "Electron Forge with Vue.js!";
 
-  function initMap() {
-    var uluru = {lat: -14.000, lng: -37.000};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: uluru,
-      mapTypeId: 'satellite',
-      disableDefaultUI: true,
-      zoomControl: true,
-      zoomControlOptions: {
-        position: google.maps.ControlPosition.LEFT_BOTTOM
-      },
-      scaleControl: true
-    });
-    /*
-    var marker = new google.maps.Marker({
-      position: uluru,
-      map: map
-    });
-    */
-  }
-
   </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAIWF272fxLuMO1pQcsUkjZYg-fY4FuGg&language=pt&region=BR&callback=initMap" type="text/javascript"></script>
+  
 </html>

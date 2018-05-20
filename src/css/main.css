@@ -1774,13 +1774,6 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   .columns.is-variable.is-8 {
     --columnGap: 2rem; }
 
-#map {
-  position: absolute;
-  width: 60vw;
-  height: 100vh;
-  top: 0;
-  left: 0; }
-
 /*
 a[href^="http://maps.google.com/maps"]{display:none !important}
 a[href^="https://maps.google.com/maps"]{display:none !important}
@@ -1798,4 +1791,23 @@ html {
 
 body {
   min-height: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  color: #150c8b; }
+
+#map {
+  position: absolute;
+  width: 60vw;
+  height: 100vh;
+  top: 0;
+  left: 0; }
+
+#panel {
+  background: #e7d3cf;
+  position: absolute;
+  width: 40vw;
+  height: 100vh;
+  top: 0;
+  right: 0; }
+
+.panel-inside {
+  padding: 40px; }

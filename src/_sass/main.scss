@@ -3,6 +3,8 @@
 @import "../../node_modules/bulma/sass/grid/columns";
 
 
+$primary-bg: #e7d3cf;
+$primary-color: #150c8b;
 
 
 @import "map";
@@ -14,5 +16,26 @@ html {
 body {
   min-height: 100%;
   overflow-x: hidden;
+  color: $primary-color;
 }
 
+#map {
+  position: absolute;
+  width: 60vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+#panel {
+  background: $primary-bg;
+  position: absolute;
+  width: 40vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+}
+
+.panel-inside {
+	padding: 40px;
+}
