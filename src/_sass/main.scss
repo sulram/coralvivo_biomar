@@ -2,7 +2,11 @@
 
 $primary-bg: #e7d3cf;
 $primary: #003761;
-$link: #003761;
+$link: $primary;
+$link-hover: lighten($primary,10%);
+$link-visited: $primary;
+$link-focus: $primary;
+$link-active: lighten($primary,10%);
 
 @import "../../node_modules/bulma/sass/base/_all";
 @import "../../node_modules/bulma/sass/grid/columns";
@@ -10,7 +14,7 @@ $link: #003761;
 
 $primary-bg: #e7d3cf;
 $primary-color: #003761;
-$link: #003761;
+
 
 @import "map";
 
