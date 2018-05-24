@@ -1794,12 +1794,19 @@ body {
 ::-webkit-scrollbar {
   display: none; }
 
+#app-main {
+  height: 100vh;
+  background: #000; }
+
 #map {
   position: absolute;
   width: 65vw;
   height: 100vh;
   top: 0;
-  left: 0; }
+  left: 0;
+  transition: transform 1s; }
+  .saver #map {
+    transform: translateX(-65vw); }
 
 #panel {
   background: #e7d3cf;
@@ -1808,7 +1815,10 @@ body {
   height: 100vh;
   top: 0;
   right: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: transform 1s; }
+  .saver #panel {
+    transform: translateX(35vw); }
   #panel .frame {
     position: absolute;
     width: calc(35vw - 40px);

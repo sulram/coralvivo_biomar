@@ -30,12 +30,22 @@ body {
 
 ::-webkit-scrollbar { display: none; }
 
+#app-main {
+  height: 100vh;
+  background: #000;
+}
+
 #map {
   position: absolute;
   width: 65vw;
   height: 100vh;
   top: 0;
   left: 0;
+  transition: transform 1s;
+
+  .saver & {
+    transform: translateX(-65vw);
+  }
 }
 
 #panel {
@@ -46,6 +56,11 @@ body {
   top: 0;
   right: 0;
   overflow: hidden;
+  transition: transform 1s;
+
+  .saver & {
+    transform: translateX(35vw);
+  }
   
   .frame {
     position: absolute;
