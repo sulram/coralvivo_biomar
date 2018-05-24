@@ -1,0 +1,105 @@
+um-projeto:
+
+  - nome: Albatroz - Biomar
+    arquivo: p-albatroz.yml
+    
+  - nome: Baleia Jubarte - Biomar
+    arquivo: p-baleia-jubarte.yml
+    
+  - nome: Coral Vivo - Biomar
+    arquivo: p-coral-vivo.yml
+    
+  - nome: Golfinho Rotador - Biomar
+    arquivo: p-golfinho-rotador.yml
+
+  - nome: Tamar - Biomar
+    arquivo: p-tamar.yml
+
+  - nome: Atol das Rocas
+    arquivo: p-atol-das-rocas.yml
+
+  - nome: Conduta Consciente
+    arquivo: p-conduta-consciente.yml
+    
+  - nome: Costa dos Corais
+    arquivo: p-costa-dos-corais.yml
+
+  - nome: Ilhas do Rio
+    arquivo: p-ilhas-do-rio.yml
+
+  - nome: Mantas do Brasil
+    arquivo: p-mantas-do-brasil.yml
+
+  - nome: Meros do Brasil
+    arquivo: p-meros-do-brasil.yml
+
+  - nome: Ponta de Pirangi
+    arquivo: p-pontas-de-pirangi.yml
+
+  - nome: Projeto MAArE
+    arquivo: p-projeto-maare.yml
+
+  - nome: Recifes Costeiros
+    arquivo: p-recifes-costeiros.yml
+
+  - nome: TerraMar
+    arquivo: p-terramar.yml
+
+
+
+uma-uc:
+
+  - nome: Abrolhos
+    arquivo: u-abrolhos.yml
+    
+  - nome: Alcatrazes - Tupinambás
+    arquivo: u-alcatrazes.yml
+
+  - nome: Arraial do Cabo
+    arquivo: u-arraial-do-cabo.yml
+
+  - nome: Arvoredo
+    arquivo: u-arvoredo.yml
+
+  - nome: Atol das Rocas
+    arquivo: u-atol-das-rocas.yml
+
+  - nome: Cadeia Vitória-Trindade
+    arquivo: u-cadeira-vitoria-trindade.yml
+
+  - nome: Cagarras
+    arquivo: u-cagarras.yml
+
+  - nome: Coroa Alta
+    arquivo: u-coroa-alta.yml
+
+  - nome: Corumbau
+    arquivo: u-corumbau.yml
+
+  - nome: Costa dos Corais
+    arquivo: u-costa-dos-corais.yml
+
+  - nome: Fernando de Noronha
+    arquivo: u-fernando-de-noronha.yml
+
+  - nome: Laje de Santos
+    arquivo: u-laje-de-santos.yml
+
+  - nome: Manuel Luís
+    arquivo: u-manuel-luis.yml
+
+  - nome: Recife de Fora
+    arquivo: u-recife-de-fora.yml
+
+  - nome: Recifes de Corais
+    arquivo: u-recife-de-corais.yml
+
+  - nome: Risca do Meio
+    arquivo: u-risca-do-meio.yml
+
+  - nome: São Pedro e São Paulo
+    arquivo: u-sao-pedro-e-sao-paulo.yml
+
+  - nome: Tamoios
+    arquivo: u-tamoios.yml
+

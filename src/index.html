@@ -3,35 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>BIOMAR</title>
+    <link rel="stylesheet" href="css/cinzel-bold/font.css">
     <link rel="stylesheet" href="css/main.css">
-
   </head>
   <body>
-    
-    <div id="app">
-      <div id="map"></div> 
-      <div id="panel">
-        <div class="panel-inside">
-          <div id="test"></div>
-        </div>
-      </div>
-      <div id="gallery"></div>
-    </div>
-
+    <div id="app"></div>
   </body>
-  
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAIWF272fxLuMO1pQcsUkjZYg-fY4FuGg&language=pt&region=BR" type="text/javascript"></script>
-
   <script>
+  
+  import fs from 'fs'
+  import Vue from 'vue'
+  import Test from './test'
+  import MainApp from './main'
+  import yaml from 'js-yaml'
 
-  import Vue from 'vue';
-  import Test from './test';
-  import MainApp from './main';
+  const app = new Vue(MainApp).$mount('#app')
 
-  const app = new Vue(MainApp).$mount('#test');
+  //app.text = "Electron Forge with Vue.js!"\
 
-  app.text = "Electron Forge with Vue.js!";
+  const data_path = "/Users/Marlus/Documents/coralvivo_biomar/data/"
+  const images_path = "/Users/Marlus/Documents/coralvivo_biomar/images/"
+
+  app.contentIndex = yaml.safeLoad(fs.readFileSync(data_path + 'index.yml', 'utf8'));
 
   </script>
-  
 </html>
