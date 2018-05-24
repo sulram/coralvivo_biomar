@@ -4,24 +4,24 @@
     <div id="panel" v-on:click="checkData">
       
       <div class="frame"></div>
-      
+
       <transition name="fade">
         <div class="panel-inside-main " v-if="state === 'index'">
           
-          <div class="columns has-text-centered">
+          <div class="columns has-text-centered main-tabs">
             <div class="column">
               <a v-on:click="selectSubstate('lista-projetos')">Projeto</a>
             </div>
             <div class="column">
-              <a v-on:click="selectSubstate('lista-ucs')">Unidades de Conservação</a>
+              <a v-on:click="selectSubstate('lista-ucs')">Unidades de<br>Conservação</a>
             </div>
           </div>
 
           <transition name="fade">
             <div class="panel-inside-content" v-if="substate === 'lista-projetos'">
               <template v-if="contentIndex">
-                <div class="lista-projetos columns is-multiline">
-                  <article class="column is-6 has-text-centered" v-for="(item, index) in contentIndex['um-projeto']">
+                <div class="lista-projetos">
+                  <article class="has-text-centered" v-for="(item, index) in contentIndex['um-projeto']">
                     <a v-on:click="selectProject(index)">{{ item.nome }}</a>
                   </article>
                 </div>
@@ -32,8 +32,8 @@
           <transition name="fade">
             <div class="panel-inside-content" v-if="substate === 'lista-ucs'">
               <template v-if="contentIndex">
-                <div class="lista-ucs columns is-multiline">
-                  <article class="column is-6 has-text-centered" v-for="(item, index) in contentIndex['uma-uc']">
+                <div class="lista-ucs">
+                  <article class="has-text-centered" v-for="(item, index) in contentIndex['uma-uc']">
                     <a v-on:click="selectUC(index)">{{ item.nome }}</a>
                   </article>
                 </div>

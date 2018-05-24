@@ -1,11 +1,16 @@
 @import "../../node_modules/bulma/sass/utilities/_all";
+
+$primary-bg: #e7d3cf;
+$primary: #003761;
+$link: #003761;
+
 @import "../../node_modules/bulma/sass/base/_all";
 @import "../../node_modules/bulma/sass/grid/columns";
 
 
 $primary-bg: #e7d3cf;
-$primary-color: #150c8b;
-
+$primary-color: #003761;
+$link: #003761;
 
 @import "map";
 
@@ -16,7 +21,7 @@ html {
 body {
   min-height: 100%;
   overflow: hidden;
-  color: $primary-color;
+  color: $primary;
 }
 
 ::-webkit-scrollbar { display: none; }
@@ -43,30 +48,35 @@ body {
     width: calc(35vw - 40px);
     height: calc(100vh - 40px);
     margin: 20px;
-    border: 2px solid rgba(0,0,0,0.1);
+    border: 2px solid $primary;
   }
 
   .panel-inside-main {
     position: absolute;
-    top: 0;
+    top: 2vw;
     left: 0;
-    width: 27vw;
-    height: 92vh;
-    margin: 4vw;
+    width: 29vw;
+    margin: 3vw;
   }
 
   .panel-inside-content {
     position: absolute;
-    top: 5vw;
+    top: 8vw;
     left: 0;
     width: 100%;
+  }
+
+  .main-tabs {
+    @extend %font-cinzel;
+    font-size: 36px;
+    line-height: 1em;
   }
 
 }
 
 %font-cinzel {
   font-family: 'Cinzel';
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .fade-enter-active {
@@ -87,22 +97,17 @@ body {
 }
 
 
-.lista-projetos {
-
-  article {
-    @extend %font-cinzel;
-    font-size: 20px;
-    padding: 30px 0;
-  }
-
-}
-
+.lista-projetos,
 .lista-ucs {
 
+  -webkit-column-count: 2;
+  -webkit-column-gap: 3em;
+  -webkit-column-rule: 1px solid $primary;
+
   article {
     @extend %font-cinzel;
-    font-size: 20px;
-    padding: 30px 0;
+    font-size: 18px;
+    padding: 20px 0;
   }
 
 }

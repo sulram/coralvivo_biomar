@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Cinzel Black';
+  src: url('Cinzel-Black.eot'); /* IE9 Compat Modes */
+  src: url('Cinzel-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Cinzel-Black.woff') format('woff'), /* Modern Browsers */
+       url('Cinzel-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Cinzel-Black.svg#c769cbb458dc3b910afc8f0d953e4ac7') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
