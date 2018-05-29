@@ -46,8 +46,7 @@
 
       <transition name="fade">
         <div class="panel-inside-main" v-if="state === 'um-projeto'">
-          PROJETO
-          <button v-on:click="backToMenu">Voltar</button>
+          <projeto v-on:backToMenu="backToMenu" v-bind:arquivo="contentIndex['um-projeto'][selecionado].arquivo"></projeto>
         </div>
       </transition>
 
@@ -64,6 +63,9 @@
 </template>
 
 <script>
+
+import projeto from './projeto.vue'
+
 export default {
 
   data () {
@@ -76,9 +78,13 @@ export default {
       contentIndex: null,
 
       counter: 0,
-      maxCounter: 30,
+      maxCounter: 120,
       interval: null
     }
+  },
+
+  components: {
+    projeto: projeto
   },
 
   mounted: function(){
@@ -154,12 +160,12 @@ export default {
 
     buildMap(){
 
-      var uluru = {lat: -14.000, lng: -37.000};
+      var initial_location = {lat: -14.000, lng: -37.000};
 
       this.map = new google.maps.Map(document.getElementById('map'), {
         zoom: 4,
-        center: uluru,
-        mapTypeId: 'satellite',
+        center: initial_location,
+        mapTypeId: google.maps.MapTypeId.HYBRID,
         disableDefaultUI: true,
         //zoomControl: true,
         //zoomControlOptions: {

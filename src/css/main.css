@@ -1774,15 +1774,6 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   .columns.is-variable.is-8 {
     --columnGap: 2rem; }
 
-a[href^="http://maps.google.com/maps"] {
-  display: none !important; }
-
-a[href^="https://maps.google.com/maps"] {
-  display: none !important; }
-
-.gmnoprint a, .gmnoprint span, .gm-style-cc {
-  display: none; }
-
 html {
   height: 100%; }
 
@@ -1827,7 +1818,7 @@ body {
     border: 2px solid #003761; }
   #panel .panel-inside-main {
     position: absolute;
-    top: 2vw;
+    top: 0;
     left: 0;
     width: 29vw;
     margin: 3vw; }
@@ -1841,7 +1832,7 @@ body {
     line-height: 1em; }
 
 #panel .main-tabs, .lista-projetos article,
-.lista-ucs article {
+.lista-ucs article, .single-projeto .title {
   font-family: 'Cinzel';
   font-weight: 900; }
 
@@ -1866,3 +1857,16 @@ body {
   .lista-ucs article {
     font-size: 18px;
     padding: 20px 0; }
+
+.single-projeto .title {
+  font-size: 52px;
+  line-height: 1em; }
+
+a[href^="http://maps.google.com/maps"] {
+  display: none !important; }
+
+a[href^="https://maps.google.com/maps"] {
+  display: none !important; }
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+  display: none; }
