@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('JosefinSans-Italic.eot'); /* IE9 Compat Modes */
+  src: url('JosefinSans-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('JosefinSans-Italic.woff') format('woff'), /* Modern Browsers */
+       url('JosefinSans-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('JosefinSans-Italic.svg#3c81cd4957a5af1daf5570b86085fd0b') format('svg'); /* Legacy iOS */
+       
+  font-style:   italic;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('JosefinSans-Regular.eot'); /* IE9 Compat Modes */
+  src: url('JosefinSans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('JosefinSans-Regular.woff') format('woff'), /* Modern Browsers */
+       url('JosefinSans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('JosefinSans-Regular.svg#b22b2e95ed5f3c10e5f379128edb7537') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Josefin Sans SemiBold';
+  src: url('JosefinSans-SemiBold.eot'); /* IE9 Compat Modes */
+  src: url('JosefinSans-SemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('JosefinSans-SemiBold.woff') format('woff'), /* Modern Browsers */
+       url('JosefinSans-SemiBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('JosefinSans-SemiBold.svg#1d4332910f1b16b20516c386ba0a31ba') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Josefin Sans SemiBold';
+  src: url('JosefinSans-SemiBoldItalic.eot'); /* IE9 Compat Modes */
+  src: url('JosefinSans-SemiBoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('JosefinSans-SemiBoldItalic.woff') format('woff'), /* Modern Browsers */
+       url('JosefinSans-SemiBoldItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('JosefinSans-SemiBoldItalic.svg#73f84ba814681e7f436561e4e42ebb09') format('svg'); /* Legacy iOS */
+       
+  font-style:   italic;
+  font-weight:  700;
+}
+
