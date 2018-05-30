@@ -46,6 +46,18 @@
           </div>
         </transition>
 
+        <transition name="fade">
+          <div class="content-main-page" v-if="state === 'colaboradores'">
+            content.colaboradores
+          </div>
+        </transition>
+
+        <transition name="fade">
+          <div class="content-main-page" v-if="state === 'contato'">
+            content.contato
+          </div>
+        </transition>
+
       </div>
 
       <div class="content-nav column is-4 has-text-centered">
@@ -57,7 +69,10 @@
           <li><a v-on:click="selectTab('contato')">Contato</a></li>
         </ul>
 
-        <button v-on:click="$emit('backToMenu')">Voltar</button>
+        <a class="back-button" v-on:click="$emit('backToMenu')">
+          <img src="img/botao-coral.png">
+          <br><span>voltar</span>
+        </a>
 
       </div>
 

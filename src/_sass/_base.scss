@@ -148,6 +148,9 @@ body {
   }
 
   .single-projeto-marcas {
+
+    margin-left: 10px;
+
     .tab {
       & > p {
         color: #000;
@@ -160,6 +163,9 @@ body {
         max-height: 56px;
         width: auto;
         margin-right: 12px;
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -184,13 +190,24 @@ body {
   }
 
   .content-nav {
-    @extend %font-cinzel;
-    font-size: 18px;
+   
     border-left: 2px solid #cfb3af;
     padding-left: 30px;
 
     li {
       padding-bottom: 30px;
+      @extend %font-cinzel;
+      font-size: 18px;
+    }
+
+    .back-button {
+      img {
+        width: 92px;
+      }
+      span {
+        font-style: italic;
+        font-weight: 700;
+      }
     }
 
   }
