@@ -1774,10 +1774,13 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   .columns.is-variable.is-8 {
     --columnGap: 2rem; }
 
-#panel .main-tabs, .lista-projetos article,
+.font-display, #panel .main-tabs, .lista-projetos article,
 .lista-ucs article, .single-projeto .title, .single-projeto .content-nav li {
   font-family: 'Cinzel';
   font-weight: 900; }
+
+* {
+  user-select: none; }
 
 html {
   height: 100%; }
@@ -1801,7 +1804,8 @@ body {
   top: 0;
   left: 0;
   transition: transform 1s; }
-  .saver #map {
+  .saver #map,
+  .galeria #map {
     transform: translateX(calc(680px - 100vw)); }
 
 #panel {
@@ -1889,8 +1893,8 @@ body {
       margin-right: 0; }
 
 .single-projeto .single-projeto-content {
-  height: 420px;
-  margin: 30px 0 60px; }
+  height: 400px;
+  margin: 10px 0 60px; }
 
 .single-projeto .content-main {
   line-height: 1.5em;
@@ -1915,6 +1919,31 @@ body {
   .single-projeto .content-nav .back-button span {
     font-style: italic;
     font-weight: 700; }
+
+.single-projeto .single-projeto-vis-selector {
+  padding: 0 60px; }
+
+.single-projeto .vis-opt {
+  transition: transform 0.6s ease;
+  transform: scale(0.7); }
+
+#app-main.area .single-projeto .vis-area {
+  transform: scale(1); }
+
+#app-main.galeria .single-projeto .vis-galeria {
+  transform: scale(1); }
+
+.single-projeto .vis-area-label {
+  opacity: 0.5;
+  transition: opacity 0.6s; }
+  #app-main.area .single-projeto .vis-area-label {
+    opacity: 1; }
+
+.single-projeto .vis-galeria-label {
+  opacity: 0.5;
+  transition: opacity 0.6s; }
+  #app-main.galeria .single-projeto .vis-galeria-label {
+    opacity: 1; }
 
 .fancy {
   line-height: 0.5;

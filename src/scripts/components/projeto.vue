@@ -80,9 +80,27 @@
 
     <div class="single-projeto-vis-selector">
       <div class="columns">
-        <div class="column"></div>
         <div class="column">
-          <img v-bind:src="thumb">
+          <div class="vis-opt vis-area">
+            <a  v-on:click="$emit('selectSubstate','area')">
+              <img src="./img/botao-map.png">
+            </a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="vis-opt vis-galeria">
+            <a v-on:click="$emit('selectSubstate','galeria')">
+              <img v-bind:src="thumb">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column has-text-centered font-display vis-area-label">
+          Localização
+        </div>
+        <div class="column has-text-centered font-display vis-galeria-label">
+          Fotos
         </div>
       </div>
     </div>    

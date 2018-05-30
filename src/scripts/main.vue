@@ -48,7 +48,11 @@
 
       <transition name="fade">
         <div class="panel-inside-main" v-if="state === 'um-projeto'">
-          <projeto v-on:backToMenu="backToMenu" v-bind:arquivo="contentIndex['um-projeto'][selecionado].arquivo"></projeto>
+          <projeto
+            v-on:backToMenu="backToMenu"
+            v-on:selectSubstate="selectSubstate"
+            v-bind:arquivo="contentIndex['um-projeto'][selecionado].arquivo"
+          ></projeto>
         </div>
       </transition>
 
