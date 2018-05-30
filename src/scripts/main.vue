@@ -1,6 +1,8 @@
 <template>
   <div id="app-main" v-bind:class="[state, substate]" v-on:click="clearTimer">
-    <div id="map"></div> 
+    
+    <maps></maps>
+
     <div id="panel">
       
       <div class="frame"></div>
@@ -64,13 +66,14 @@
 
 <script>
 
-import projeto from './projeto.vue'
+import projeto from './components/projeto.vue'
+import maps from './components/maps.vue'
 
 export default {
 
   data () {
     return {
-      map: null,
+
       state: 'index',
       substate: 'lista-projetos',
       selecionado: null,
@@ -84,12 +87,12 @@ export default {
   },
 
   components: {
-    projeto: projeto
+    projeto: projeto,
+    maps: maps
   },
 
   mounted: function(){
   	console.log("app mounted")
-    this.buildMap()
     this.startTimer()
   },
 
@@ -156,68 +159,6 @@ export default {
       this.tab = null
       // change state
       this.state = 'index'
-    },
-
-    buildMap(){
-
-      var initial_location = {lat: -14.000, lng: -37.000};
-
-      this.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: initial_location,
-        mapTypeId: google.maps.MapTypeId.HYBRID,
-        disableDefaultUI: true,
-        //zoomControl: true,
-        //zoomControlOptions: {
-        //  position: google.maps.ControlPosition.LEFT_BOTTOM
-        //},
-        //scaleControl: true
-        styles: [
-          {
-            "featureType": "administrative",
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "visibility": "off"
-              }
-            ]
-          },
-          {
-            "featureType": "poi",
-            "stylers": [
-              {
-                "visibility": "off"
-              }
-            ]
-          },
-          {
-            "featureType": "road",
-            "stylers": [
-              {
-                "visibility": "off"
-              }
-            ]
-          },
-          {
-            "featureType": "road",
-            "elementType": "labels.icon",
-            "stylers": [
-              {
-                "visibility": "off"
-              }
-            ]
-          },
-          {
-            "featureType": "transit",
-            "stylers": [
-              {
-                "visibility": "off"
-              }
-            ]
-          }
-        ]
-      })
-
     }
   }
 }

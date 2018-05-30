@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>BIOMAR</title>
+    <title>coralvivo_biomar</title>
     <link rel="stylesheet" href="css/cinzel-black/font.css">
     <link rel="stylesheet" href="css/josefin-sans/font.css">
     <link rel="stylesheet" href="css/main.css">
@@ -13,29 +13,28 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAIWF272fxLuMO1pQcsUkjZYg-fY4FuGg&language=pt&region=BR" type="text/javascript"></script>
   <script>
   
-  import fs from 'fs'
-  import Vue from 'vue'
-  import MainApp from './main'
-  import yaml from 'js-yaml'
+    import fs from 'fs'
+    import Vue from 'vue'
+    import yaml from 'js-yaml'
+    import MainApp from './scripts/main'
+    import Store from './scripts/store'
+    //const Store = require('./scripts/store.js')
 
-  const Store = require('./store.js')
-  const app = new Vue(MainApp).$mount('#app')
+    const store = new Store({
+      configName: 'settings',
+      defaults: {
+          "dataPath": "/Users/Marlus/Documents/coralvivo_biomar/data/",
+          "uLogoPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/LOGOS/",
+          "pGalleryPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/FOTOS_PROJETOS/",
+          "uGalleryPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/FOTOS_UCS/",
+          "pGeoPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/KMZ_PROJETOS/",
+          "uGeoPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/KMZ_UCS/"
+      }
+    });
 
-  //app.text = "Electron Forge with Vue.js!"\
+    const app = new Vue(MainApp).$mount('#app')
 
-  const store = new Store({
-    configName: 'settings',
-    defaults: {
-        "dataPath": "/Users/Marlus/Documents/coralvivo_biomar/data/",
-        "uLogoPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/LOGOS/",
-        "pGalleryPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/FOTOS_PROJETOS/",
-        "uGalleryPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/FOTOS_UCS/",
-        "pGeoPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/KMZ_PROJETOS/",
-        "uGeoPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/KMZ_UCS/"
-    }
-  });
-
-  app.contentIndex = yaml.safeLoad(fs.readFileSync(store.get('dataPath') + 'index.yml', 'utf8'));
+    app.contentIndex = yaml.safeLoad(fs.readFileSync(store.get('dataPath') + 'index.yml', 'utf8'));
 
   </script>
 </html>
