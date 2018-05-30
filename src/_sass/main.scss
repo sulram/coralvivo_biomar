@@ -8,6 +8,8 @@ $link-visited: $primary;
 $link-focus: $primary;
 $link-active: lighten($primary,10%);
 
+$family-primary: 'Josefin Sans';
+
 @import "../../node_modules/bulma/sass/base/_all";
 @import "../../node_modules/bulma/sass/grid/columns";
 

@@ -112,7 +112,7 @@ button,
 input,
 select,
 textarea {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: "Josefin Sans"; }
 
 code,
 pre {
@@ -1774,6 +1774,11 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   .columns.is-variable.is-8 {
     --columnGap: 2rem; }
 
+#panel .main-tabs, .lista-projetos article,
+.lista-ucs article, .single-projeto .title, .single-projeto .content-nav {
+  font-family: 'Cinzel';
+  font-weight: 900; }
+
 html {
   height: 100%; }
 
@@ -1791,28 +1796,28 @@ body {
 
 #map {
   position: absolute;
-  width: 65vw;
+  width: calc(100vw - 680px);
   height: 100vh;
   top: 0;
   left: 0;
   transition: transform 1s; }
   .saver #map {
-    transform: translateX(-65vw); }
+    transform: translateX(calc(680px - 100vw)); }
 
 #panel {
   background: #e7d3cf;
   position: absolute;
-  width: 35vw;
+  width: 680px;
   height: 100vh;
   top: 0;
   right: 0;
   overflow: hidden;
   transition: transform 1s; }
   .saver #panel {
-    transform: translateX(35vw); }
+    transform: translateX(680px); }
   #panel .frame {
     position: absolute;
-    width: calc(35vw - 40px);
+    width: 640px;
     height: calc(100vh - 40px);
     margin: 20px;
     border: 2px solid #003761; }
@@ -1820,8 +1825,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 29vw;
-    margin: 3vw; }
+    width: 580px;
+    margin: 60px 50px 0; }
   #panel .panel-inside-content {
     position: absolute;
     top: 8vw;
@@ -1830,11 +1835,6 @@ body {
   #panel .main-tabs {
     font-size: 36px;
     line-height: 1em; }
-
-#panel .main-tabs, .lista-projetos article,
-.lista-ucs article, .single-projeto .title {
-  font-family: 'Cinzel';
-  font-weight: 900; }
 
 .fade-enter-active {
   transition: all 1s 0.5s; }
@@ -1859,8 +1859,79 @@ body {
     padding: 20px 0; }
 
 .single-projeto .title {
-  font-size: 52px;
-  line-height: 1em; }
+  font-size: 56px;
+  line-height: 0.85em; }
+
+.single-projeto .desde {
+  margin-top: 10px;
+  font-style: italic;
+  font-weight: 700; }
+
+.single-projeto .marca {
+  min-width: 160px; }
+  .single-projeto .marca img {
+    max-height: 120px;
+    width: auto; }
+
+.single-projeto .single-projeto-marcas .tab > p {
+  color: #000;
+  font-size: 10px;
+  text-transform: uppercase;
+  opacity: 0.3;
+  margin-bottom: 10px; }
+
+.single-projeto .single-projeto-marcas .tab img {
+  max-height: 56px;
+  width: auto;
+  margin-right: 12px; }
+
+.single-projeto .single-projeto-content {
+  height: 420px;
+  margin: 30px 0 60px; }
+
+.single-projeto .content-main {
+  line-height: 1.5em;
+  text-align: right;
+  position: relative; }
+
+.single-projeto .content-main-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 40px 0 20px; }
+
+.single-projeto .content-nav {
+  font-size: 18px;
+  border-left: 2px solid #cfb3af;
+  padding-left: 30px; }
+  .single-projeto .content-nav li {
+    padding-bottom: 30px; }
+
+.fancy {
+  line-height: 0.5;
+  text-align: center; }
+
+.fancy span {
+  display: inline-block;
+  position: relative; }
+
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-top: 2px solid #003761;
+  top: 3px;
+  width: 60px; }
+
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px; }
+
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px; }
 
 a[href^="http://maps.google.com/maps"] {
   display: none !important; }
