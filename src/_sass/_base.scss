@@ -286,3 +286,38 @@ body {
   left: 100%;
   margin-left: 15px;
 }
+
+
+// galeria
+
+.galeria-wrapper {
+  position: absolute;
+  width: calc(100vw - 680px);
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+  .saver & {
+    width: 100vw;
+  }
+  
+  .pswp {
+    z-index: 0;
+  }
+
+  .pswp__caption__center {
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .pswp__button--arrow--left {
+    left: 20px;
+    transform: scale(2);
+  }
+  .pswp__button--arrow--right {
+    right: 20px;
+    transform: scale(2);
+  }
+
+}
+

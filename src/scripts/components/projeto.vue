@@ -82,14 +82,14 @@
       <div class="columns">
         <div class="column">
           <div class="vis-opt vis-area">
-            <a  v-on:click="$emit('selectSubstate','area')">
+            <a  v-on:click="focusArea">
               <img src="./img/botao-map.png">
             </a>
           </div>
         </div>
         <div class="column">
           <div class="vis-opt vis-galeria">
-            <a v-on:click="$emit('selectSubstate','galeria')">
+            <a v-on:click="openGallery">
               <img v-bind:src="thumb">
             </a>
           </div>
@@ -133,9 +133,23 @@
       },
 
       methods: {
+
         selectTab(val) {
           this.state = val
+        },
+
+        openGallery(){
+          
+          this.$emit('createGallery', this.content.fotos)
+          
+        },
+
+        focusArea() {
+          
+          this.$emit('closeGallery')
+
         }
+
       },
 
       computed: {

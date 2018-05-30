@@ -53,6 +53,7 @@
     "electron-devtools-installer": "^2.2.4",
     "electron-squirrel-startup": "^1.0.0",
     "js-yaml": "^3.11.0",
+    "probe-image-size": "^4.0.0",
     "vue": "^2.5.16"
   },
   "devDependencies": {
