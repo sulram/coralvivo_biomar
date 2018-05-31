@@ -45,6 +45,7 @@ body {
   top: 0;
   left: 0;
   transition: transform 1s;
+  z-index: 100;
 
   .saver &,
   .galeria & {
@@ -61,6 +62,7 @@ body {
   right: 0;
   overflow: hidden;
   transition: transform 1s;
+  z-index: 100;
 
   .saver & {
     transform: translateX(680px);
@@ -302,7 +304,7 @@ body {
   }
   
   .pswp {
-    z-index: 0;
+    z-index: 100;
   }
 
   .pswp__caption__center {
@@ -320,4 +322,5 @@ body {
   }
 
 }
+
 

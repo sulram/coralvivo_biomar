@@ -1,13 +1,19 @@
 <template>
   <div id="app-main" v-bind:class="[state, substate]" v-on:click="clearTimer">
     
+    <!-- SCREENSAVER -->
+    
+    <transition name="fade">
+    <saver ref="saver" v-if="state === 'saver'"></saver>
+    </transition>
+
     <!-- GALERIA -->
 
     <galeria ref="galeria"></galeria>
 
     <!-- MAPS -->
 
-    <maps></maps>
+    <maps ref="maps"></maps>
 
     <!-- PANEL -->
 
@@ -19,7 +25,7 @@
 
       <transition name="fade">
 
-        <div class="panel-inside-main " v-if="state === 'index'">
+        <div class="panel-inside-main" v-if="state === 'index'">
           
           <div class="columns has-text-centered main-tabs">
             <div class="column">
@@ -88,6 +94,7 @@
 
 <script>
 
+import saver from './components/saver.vue'
 import galeria from './components/galeria.vue'
 import projeto from './components/projeto.vue'
 import maps from './components/maps.vue'
@@ -105,12 +112,13 @@ export default {
       contentIndex: null,
 
       counter: 0,
-      maxCounter: 120,
+      maxCounter: 10,
       interval: null
     }
   },
 
   components: {
+    saver: saver,
     galeria: galeria,
     projeto: projeto,
     maps: maps
@@ -151,6 +159,8 @@ export default {
       this.counter++
       console.log(this.counter)
       if(this.counter >= this.maxCounter){
+        if(this.substate == 'galeria')
+          this.$refs.galeria.closeGallery()
         this.state = 'saver'
         this.substate = null
         this.stopTimer()
