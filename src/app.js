@@ -15,8 +15,10 @@ const createWindow = async () => {
   mainWindow = new BrowserWindow({
     width: 1920,
     height: 1080,
-    //kiosk: true
+    kiosk: true
   });
+
+  mainWindow.setMenu(null);
 
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/index.html`);
