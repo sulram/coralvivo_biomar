@@ -26,7 +26,15 @@
 
     const store = new Store({
       configName: 'settings',
-      defaults: {
+      defaults: process.platform == "win32" ? {
+          "dataPath": "D:/Documentos/GitHub/coralvivo_biomar/data/",
+          "uLogoPath": "D:/CORALVIVO_BIOMAR_FILES/LOGOS/",
+          "pGalleryPath": "D:/CORALVIVO_BIOMAR_FILES/FOTOS_PROJETOS/",
+          "uGalleryPath": "D:/CORALVIVO_BIOMAR_FILES/FOTOS_UCS/",
+          "pGeoPath": "D:/CORALVIVO_BIOMAR_FILES/KMZ_PROJETOS/",
+          "uGeoPath": "D:/CORALVIVO_BIOMAR_FILES/KMZ_UCS/"
+      }
+      : {
           "dataPath": "/Users/Marlus/Documents/coralvivo_biomar/data/",
           "uLogoPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/LOGOS/",
           "pGalleryPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/FOTOS_PROJETOS/",
