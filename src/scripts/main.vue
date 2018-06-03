@@ -187,13 +187,13 @@ export default {
       console.log(val)
     },
 
-    createGallery(val) {
+    createGallery(fotos, legendas) {
       
       if(this.substate == 'galeria') return
 
       this.selectSubstate('galeria')
 
-      this.$refs.galeria.createGallery(val)
+      this.$refs.galeria.createGallery(fotos, legendas)
 
     },
 

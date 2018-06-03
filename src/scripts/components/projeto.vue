@@ -53,8 +53,8 @@
         </transition>
 
         <transition name="fade">
-          <div class="content-main-page" v-if="state === 'contato'">
-            content.contato
+          <div class="content-main-page has-text-centered" v-if="state === 'contato'">
+            <p v-for="(value, prop) in content.contatos" style="margin-bottom:10px;"><strong>{{ prop }}</strong><br>{{value}}</p>
           </div>
         </transition>
 
@@ -65,7 +65,7 @@
         <ul>
           <li><a v-on:click="selectTab('sobre')">Sobre</a></li>
           <li><a v-on:click="selectTab('resultados')">Resultados</a></li>
-          <li><a v-on:click="selectTab('colaboradores')">Colaboradores</a></li>
+          <!-- <li><a v-on:click="selectTab('colaboradores')">Colaboradores</a></li> -->
           <li><a v-on:click="selectTab('contato')">Contato</a></li>
         </ul>
 
@@ -140,7 +140,7 @@
 
         openGallery(){
           
-          this.$emit('createGallery', this.content.fotos)
+          this.$emit('createGallery', this.content.fotos, this.content.legendas)
           
         },
 

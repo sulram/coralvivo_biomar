@@ -95,18 +95,18 @@
 
       methods: {
 
-        createGallery(val) {
+        createGallery(fotos,legendas) {
 
           var items = []
 
-          val.map(function(el,i){
+          fotos.map(function(el,i){
             var data = fs.readFileSync(store.get('pGalleryPath') + el)
             var dimensions = probe.sync(data)
             items.push({
               src: store.get('pGalleryPath') + el,
               w: dimensions.width,
               h: dimensions.height,
-              title: el 
+              title: (legendas !== null && legendas !== undefined) ? legendas[i] : el
             })
           })
 
