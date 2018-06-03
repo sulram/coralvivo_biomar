@@ -42,7 +42,7 @@ um-projeto:
   - nome: TerraMar
     arquivo: p-terramar.yml
 
-  - nome: Toyota Costa dos Corais
+  - nome: Toyota<br>Costa dos Corais
     arquivo: p-costa-dos-corais.yml
 
 uma-uc:

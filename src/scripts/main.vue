@@ -43,7 +43,7 @@
               <template v-if="contentIndex">
                 <div class="lista-projetos">
                   <article class="has-text-centered" v-for="(item, index) in contentIndex['um-projeto']">
-                    <a v-on:click="selectProject(index)">{{ item.nome }}</a>
+                    <a v-on:click="selectProject(index)" v-html="item.nome"></a>
                   </article>
                 </div>
               </template>
@@ -58,7 +58,7 @@
               <template v-if="contentIndex">
                 <div class="lista-ucs">
                   <article class="has-text-centered" v-for="(item, index) in contentIndex['uma-uc']">
-                    <a v-on:click="selectUC(index)">{{ item.nome }}</a>
+                    <a v-on:click="selectUC(index)" v-html="item.nome"></a>
                   </article>
                 </div>
               </template>
