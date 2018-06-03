@@ -116,18 +116,25 @@ body {
   opacity: 0;
 }
 
+.sobre-ucs {
+  width: 75%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  //border-bottom: 2px solid #ceb1ab;
+}
 
 .lista-projetos,
 .lista-ucs {
 
   -webkit-column-count: 2;
   -webkit-column-gap: 3em;
-  -webkit-column-rule: 1px solid $primary;
+  -webkit-column-rule: 1px solid #ceb1ab;
 
   article {
     @extend %font-cinzel;
     font-size: 18px;
-    padding: 20px 0;
+    padding: 18px 0;
   }
 
 }

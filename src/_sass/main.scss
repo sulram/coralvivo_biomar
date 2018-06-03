@@ -3,19 +3,16 @@
 $primary-bg: #e7d3cf;
 $primary: #003761;
 $link: $primary;
-$link-hover: lighten($primary,10%);
+$link-hover: darken($primary,4%);
 $link-visited: $primary;
 $link-focus: $primary;
-$link-active: lighten($primary,10%);
+$link-active: darken($primary,4%);
+$text-strong: $primary;
 
 $family-primary: 'Josefin Sans';
 
 @import "../../node_modules/bulma/sass/base/_all";
 @import "../../node_modules/bulma/sass/grid/columns";
-
-
-$primary-bg: #e7d3cf;
-$primary-color: #003761;
 
 
 @import "base";

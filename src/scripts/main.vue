@@ -52,6 +52,9 @@
           
           <transition name="fade">
             <div class="panel-inside-content" v-if="substate === 'lista-ucs'">
+              <div class="sobre-ucs has-text-centered">
+                Visam proteger populações, habitats e ecossistemas, preservando o patrimônio biológico. São de dois tipos: de proteção integral, onde não é possível o consumo, coleta ou dano aos recursos naturais; e de uso sustentável, onde é possível a coleta controlada de recursos naturais de forma a assegurar sua perenidade.
+              </div>
               <template v-if="contentIndex">
                 <div class="lista-ucs">
                   <article class="has-text-centered" v-for="(item, index) in contentIndex['uma-uc']">

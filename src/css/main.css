@@ -133,7 +133,7 @@ a {
   a strong {
     color: currentColor; }
   a:hover {
-    color: #005494; }
+    color: #002b4d; }
 
 code {
   background-color: whitesmoke;
@@ -165,7 +165,7 @@ span {
   font-weight: inherit; }
 
 strong {
-  color: #363636;
+  color: #003761;
   font-weight: 700; }
 
 pre {
@@ -189,7 +189,7 @@ table th {
   vertical-align: top; }
 
 table th {
-  color: #363636; }
+  color: #003761; }
 
 .is-clearfix::after {
   clear: both;
@@ -1854,15 +1854,21 @@ body {
 .fade-leave-to {
   opacity: 0; }
 
+.sobre-ucs {
+  width: 75%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  margin-bottom: 30px; }
+
 .lista-projetos,
 .lista-ucs {
   -webkit-column-count: 2;
   -webkit-column-gap: 3em;
-  -webkit-column-rule: 1px solid #003761; }
+  -webkit-column-rule: 1px solid #ceb1ab; }
   .lista-projetos article,
   .lista-ucs article {
     font-size: 18px;
-    padding: 20px 0; }
+    padding: 18px 0; }
 
 .single-projeto .title {
   font-size: 56px;
