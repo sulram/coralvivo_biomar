@@ -15,7 +15,6 @@ global.store = new Store({
   configName: 'settings',
   defaults: process.platform == "win32" ? {
       "dataPath": "D:/Documentos/GitHub/coralvivo_biomar/data/",
-      "uLogoPath": "D:/CORALVIVO_BIOMAR_FILES/LOGOS/",
       "pGalleryPath": "D:/CORALVIVO_BIOMAR_FILES/FOTOS_PROJETOS/",
       "uGalleryPath": "D:/CORALVIVO_BIOMAR_FILES/FOTOS_UCS/",
       "pGeoPath": "D:/CORALVIVO_BIOMAR_FILES/KMZ_PROJETOS/",
@@ -25,7 +24,6 @@ global.store = new Store({
   }
   : {
       "dataPath": "/Users/marlus/Documents/coralvivo_biomar/data/",
-      "uLogoPath": "/Users/marlus/Documents/CORALVIVO_FILES/LOGOS/",
       "pGalleryPath": "/Users/marlus/Documents/CORALVIVO_FILES/FOTOS_PROJETOS/",
       "uGalleryPath": "/Users/marlus/Documents/CORALVIVO_FILES/FOTOS_UCS/",
       "pGeoPath": "/Users/marlus/Documents/CORALVIVO_FILES/KMZ_PROJETOS/",

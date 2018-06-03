@@ -154,11 +154,11 @@
         },
 
         logoPath() {
-          return store.get('uLogoPath')
+          return "img/marcas/"
         },
 
         logo() {
-          return store.get('uLogoPath') + this.content.logo
+          return "img/marcas/" + this.content.logo
         }
       }
   }
