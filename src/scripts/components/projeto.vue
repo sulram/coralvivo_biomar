@@ -35,15 +35,11 @@
       <div class="content-main column is-8">
         
         <transition name="fade">
-          <div class="content-main-page" v-if="state === 'sobre'">
-            {{ content.sobre }}
-          </div>
+          <div class="content-main-page" v-if="state === 'sobre'" v-html="content.sobre"></div>
         </transition>
 
         <transition name="fade">
-          <div class="content-main-page" v-if="state === 'resultados'">
-            {{ content.resultados }}
-          </div>
+          <div class="content-main-page" v-if="state === 'resultados'" v-html="content.resultados"></div>
         </transition>
 
         <transition name="fade">
