@@ -20,9 +20,6 @@ um-projeto:
 
   - nome: Conduta Consciente
     arquivo: p-conduta-consciente.yml
-    
-  - nome: Costa dos Corais
-    arquivo: p-costa-dos-corais.yml
 
   - nome: Ilhas do Rio
     arquivo: p-ilhas-do-rio.yml
@@ -45,7 +42,8 @@ um-projeto:
   - nome: TerraMar
     arquivo: p-terramar.yml
 
-
+  - nome: Toyota Costa dos Corais
+    arquivo: p-costa-dos-corais.yml
 
 uma-uc:
 
