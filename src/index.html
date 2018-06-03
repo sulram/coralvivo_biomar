@@ -21,29 +21,8 @@
     import Vue from 'vue'
     import yaml from 'js-yaml'
     import MainApp from './scripts/main'
-    import Store from './scripts/store'
-    //const Store = require('./scripts/store.js')
 
-    const store = new Store({
-      configName: 'settings',
-      defaults: process.platform == "win32" ? {
-          "dataPath": "D:/Documentos/GitHub/coralvivo_biomar/data/",
-          "uLogoPath": "D:/CORALVIVO_BIOMAR_FILES/LOGOS/",
-          "pGalleryPath": "D:/CORALVIVO_BIOMAR_FILES/FOTOS_PROJETOS/",
-          "uGalleryPath": "D:/CORALVIVO_BIOMAR_FILES/FOTOS_UCS/",
-          "pGeoPath": "D:/CORALVIVO_BIOMAR_FILES/KMZ_PROJETOS/",
-          "uGeoPath": "D:/CORALVIVO_BIOMAR_FILES/KMZ_UCS/"
-      }
-      : {
-          "dataPath": "/Users/Marlus/Documents/coralvivo_biomar/data/",
-          "uLogoPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/LOGOS/",
-          "pGalleryPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/FOTOS_PROJETOS/",
-          "uGalleryPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/FOTOS_UCS/",
-          "pGeoPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/KMZ_PROJETOS/",
-          "uGeoPath": "/Users/Marlus/Desktop/CORAL_VIVO_PESADAO/EXPO/FINAL/KMZ_UCS/"
-      }
-    });
-
+    const store = require('electron').remote.getGlobal('store');
     const app = new Vue(MainApp).$mount('#app')
 
     app.contentIndex = yaml.safeLoad(fs.readFileSync(store.get('dataPath') + 'index.yml', 'utf8'));

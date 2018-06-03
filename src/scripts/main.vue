@@ -1,5 +1,5 @@
 <template>
-  <div id="app-main" v-bind:class="[state, substate]" v-on:click="clearTimer">
+  <div id="app-main" v-bind:class="[state, substate]" v-on:click="screensaverClearTimer">
     
     <!-- SCREENSAVER -->
     
@@ -111,9 +111,9 @@ export default {
       tab: null,
       contentIndex: null,
 
-      counter: 0,
-      maxCounter: 10,
-      interval: null
+      screensaver_counter: 0,
+      screensaver_seconds: store.get('screensaver_seconds'),
+      screensaver_interval: null
     }
   },
 
@@ -126,7 +126,7 @@ export default {
 
   mounted: function(){
   	console.log("app mounted")
-    this.startTimer()
+    this.screensaverStartTimer()
   },
 
   methods: {
@@ -135,35 +135,35 @@ export default {
       console.log('index',this.contentIndex)
     },
 
-    startTimer() {
-      this.interval = setInterval(this.countDown, 1000);
+    screensaverStartTimer() {
+      this.screensaver_interval = setInterval(this.screensaverCountDown, 1000);
     },
 
-    stopTimer() {
-      clearInterval(this.interval)
-      this.interval = null
-      this.counter = 0
+    screensaverStopTimer() {
+      clearInterval(this.screensaver_interval)
+      this.screensaver_interval = null
+      this.screensaver_counter = 0
     },
 
-    clearTimer() {
-      this.counter = 0
-      console.log('clearTimer()')
+    screensaverClearTimer() {
+      this.screensaver_counter = 0
+      console.log('screensaverClearTimer()')
       if(this.state == 'saver'){
         this.state = 'index'
         this.substate = 'lista-projetos'
-        this.startTimer()
+        this.screensaverStartTimer()
       }
     },
 
-    countDown() {
-      this.counter++
-      console.log(this.counter)
-      if(this.counter >= this.maxCounter){
+    screensaverCountDown() {
+      this.screensaver_counter++
+      console.log(this.screensaver_counter)
+      if(this.screensaver_counter >= this.screensaver_seconds){
         if(this.substate == 'galeria')
           this.$refs.galeria.closeGallery()
         this.state = 'saver'
         this.substate = null
-        this.stopTimer()
+        this.screensaverStopTimer()
       }
     },
 

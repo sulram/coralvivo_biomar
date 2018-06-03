@@ -2,11 +2,39 @@ import { app, BrowserWindow } from 'electron';
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer';
 import { enableLiveReload } from 'electron-compile';
 
+import Store from './scripts/store'
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
 const isDevMode = process.execPath.match(/[\\/]electron/);
+
+global.screensaver_seconds = 120;
+global.store = new Store({
+  configName: 'settings',
+  defaults: process.platform == "win32" ? {
+      "dataPath": "D:/Documentos/GitHub/coralvivo_biomar/data/",
+      "uLogoPath": "D:/CORALVIVO_BIOMAR_FILES/LOGOS/",
+      "pGalleryPath": "D:/CORALVIVO_BIOMAR_FILES/FOTOS_PROJETOS/",
+      "uGalleryPath": "D:/CORALVIVO_BIOMAR_FILES/FOTOS_UCS/",
+      "pGeoPath": "D:/CORALVIVO_BIOMAR_FILES/KMZ_PROJETOS/",
+      "uGeoPath": "D:/CORALVIVO_BIOMAR_FILES/KMZ_UCS/",
+
+      "screensaver_seconds": 100
+  }
+  : {
+      "dataPath": "/Users/marlus/Documents/coralvivo_biomar/data/",
+      "uLogoPath": "/Users/marlus/Documents/CORALVIVO_FILES/LOGOS/",
+      "pGalleryPath": "/Users/marlus/Documents/CORALVIVO_FILES/FOTOS_PROJETOS/",
+      "uGalleryPath": "/Users/marlus/Documents/CORALVIVO_FILES/FOTOS_UCS/",
+      "pGeoPath": "/Users/marlus/Documents/CORALVIVO_FILES/KMZ_PROJETOS/",
+      "uGeoPath": "/Users/marlus/Documents/CORALVIVO_FILES/KMZ_UCS/",
+
+      "screensaver_seconds": 120
+  }
+});
+
 
 if (isDevMode) enableLiveReload();
 
@@ -15,7 +43,7 @@ const createWindow = async () => {
   mainWindow = new BrowserWindow({
     width: 1920,
     height: 1080,
-    kiosk: true
+    //kiosk: true
   });
 
   mainWindow.setMenu(null);
@@ -63,3 +91,5 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+
+
