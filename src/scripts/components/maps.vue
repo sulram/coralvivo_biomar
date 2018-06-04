@@ -22,10 +22,10 @@ export default {
 
     buildMap(){
 
-      var initial_location = {lat: -14.000, lng: -37.000};
+      var initial_location = {lat: -13, lng: -37};
 
       this.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
+        zoom: 5,
         center: initial_location,
         mapTypeId: google.maps.MapTypeId.HYBRID,
         disableDefaultUI: true,
