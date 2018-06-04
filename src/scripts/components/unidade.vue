@@ -25,7 +25,7 @@
       <div class="content-main column is-8">
         
         <transition name="fade">
-          <div class="content-main-page" v-if="state === 'sobre'" v-html="content.sobre" style="font-size: 14px;"></div>
+          <div class="content-main-page" v-if="state === 'sobre'" v-html="content.sobre" v-bind:style="{ fontSize: content.smalltext ? '14px' : '16px' }"></div>
         </transition>
 
         <transition name="fade">
