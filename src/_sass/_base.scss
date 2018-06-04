@@ -86,7 +86,7 @@ body {
 
   .panel-inside-content {
     position: absolute;
-    top: 8vw;
+    top: 170px;
     left: 0;
     width: 100%;
   }
@@ -120,8 +120,46 @@ body {
   width: 75%;
   margin: 0 auto;
   padding-bottom: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   //border-bottom: 2px solid #ceb1ab;
+}
+
+.main-tabs {
+  .tab {
+    transition: all 1s;
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+  .tab-projetos {
+    .lista-projetos & {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .tab-ucs {
+    .lista-ucs & {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .line {
+    margin-top: -30px;
+    transition: all 1s;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  .line-projetos {
+    .lista-projetos & {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .line-ucs {
+    .lista-ucs & {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
 
 .lista-projetos,
@@ -137,6 +175,15 @@ body {
     padding: 18px 0;
   }
 
+}
+
+.coral-footer {
+  background: url(../img/fundo-lista-projetos.png) no-repeat 0 0;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 640px;
+  height: 400px;
 }
 
 .single-projeto {

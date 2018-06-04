@@ -20,19 +20,35 @@
     <div id="panel">
       
       <div class="frame"></div>
-      
+
+      <transition name="fade">
+        <div class="coral-footer" v-if="substate === 'lista-projetos'"></div>
+      </transition>
+
       <!-- INDEX -->
 
       <transition name="fade">
 
         <div class="panel-inside-main" v-if="state === 'index'">
           
-          <div class="columns has-text-centered main-tabs">
+          <div class="main-tabs columns is-vcentered has-text-centered main-tabs">
             <div class="column">
-              <a v-on:click="selectSubstate('lista-projetos')">Projeto</a>
+              <img
+                v-bind:class="{ active: substate === 'lista-projetos' }"
+                v-on:click="selectSubstate('lista-projetos')"
+                src="img/tab-projetos.svg"
+                class="tab tab-projetos"
+              >
+              <img src="img/coraline.svg" class="line line-projetos">
             </div>
             <div class="column">
-              <a v-on:click="selectSubstate('lista-ucs')">Unidades de<br>Conservação</a>
+              <img
+                v-bind:class="{ active: substate === 'lista-ucs' }"
+                v-on:click="selectSubstate('lista-ucs')"
+                src="img/tab-ucs.svg"
+                class="tab tab-ucs"
+              >
+              <img src="img/coraline.svg" class="line line-ucs">
             </div>
           </div>
           
