@@ -86,11 +86,11 @@ uma-uc:
   - nome: Manuel Luís
     arquivo: u-manuel-luis.yml
 
-  - nome: Recife de Fora
-    arquivo: u-recife-de-fora.yml
-
   - nome: Recifes de Corais
     arquivo: u-recife-de-corais.yml
+
+  - nome: Recife de Fora
+    arquivo: u-recife-de-fora.yml
 
   - nome: Risca do Meio
     arquivo: u-risca-do-meio.yml
