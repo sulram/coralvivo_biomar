@@ -40,7 +40,7 @@
         <transition name="fade">
           <div class="content-main-page" v-if="state === 'contato'">
             <div style="height:40px;"></div>
-            <p v-for="(value, prop) in content.contatos" style="margin-bottom:10px;"><strong class="is-uppercase is-size-7">{{ labels[prop] }}</strong><br>{{value}}</p>
+            <p v-for="(value, prop) in content.contatos" style="margin-bottom:10px;"><strong class="is-uppercase is-size-7">{{ labels[prop] }}</strong><br><span v-html="value"></span></p>
           </div>
         </transition>
 
