@@ -59,10 +59,19 @@
       <div class="content-nav column is-4 has-text-centered">
         
         <ul>
-          <li><a v-on:click="selectTab('sobre')">Sobre</a></li>
-          <li><a v-on:click="selectTab('resultados')">Resultados</a></li>
+          <li>
+            <a v-on:click="selectTab('sobre')">Sobre</a>
+            <img src="img/coraline.svg" class="line" v-bind:class="{ active: state === 'sobre' }">
+          </li>
+          <li>
+            <a v-on:click="selectTab('resultados')">Resultados</a>
+            <img src="img/coraline.svg" class="line" v-bind:class="{ active: state === 'resultados' }">
+          </li>
           <!-- <li><a v-on:click="selectTab('colaboradores')">Colaboradores</a></li> -->
-          <li><a v-on:click="selectTab('contato')">Contato</a></li>
+          <li>
+            <a v-on:click="selectTab('contato')">Contato</a>
+            <img src="img/coraline.svg" class="line" v-bind:class="{ active: state === 'contato' }">
+          </li>
         </ul>
 
         <a class="back-button" v-on:click="$emit('backToMenu')">
@@ -94,9 +103,11 @@
       <div class="columns">
         <div class="column has-text-centered font-display vis-area-label">
           Localização
+          <img src="img/coraline.svg" class="line">
         </div>
         <div class="column has-text-centered font-display vis-galeria-label">
           Fotos
+          <img src="img/coraline.svg" class="line">
         </div>
       </div>
     </div>    
