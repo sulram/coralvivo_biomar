@@ -11,7 +11,7 @@
           <span>desde {{ content.desde }}</span>
         </div>
       </div>
-      <div class="column is-narrow">
+      <div class="column is-narrow" v-if="content.logo">
         <div class="marca">
           <img v-bind:src="logo" height="120">
         </div>
