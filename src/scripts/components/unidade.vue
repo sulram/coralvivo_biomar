@@ -73,7 +73,7 @@
     </div>
 
     <div class="single-projeto-vis-selector">
-      <div class="columns">
+      <div class="columns is-vcentered">
         <div class="column">
           <div class="vis-opt vis-area">
             <a  v-on:click="focusArea">
