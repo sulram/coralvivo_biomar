@@ -85,8 +85,12 @@
 
       <transition name="fade">
         <div class="panel-inside-main" v-if="state === 'uma-uc'">
-          UC
-          <button v-on:click="backToMenu">Voltar</button>
+          <unidade
+              v-on:backToMenu="backToMenu"
+              v-on:createGallery="createGallery"
+              v-on:closeGallery="closeGallery"
+              v-bind:arquivo="contentIndex['uma-uc'][selecionado].arquivo"
+          ></unidade>
         </div>
       </transition>
 
@@ -100,6 +104,7 @@
 import saver from './components/saver.vue'
 import galeria from './components/galeria.vue'
 import projeto from './components/projeto.vue'
+import unidade from './components/unidade.vue'
 import maps from './components/maps.vue'
 
 
@@ -124,6 +129,7 @@ export default {
     saver: saver,
     galeria: galeria,
     projeto: projeto,
+    unidade: unidade,
     maps: maps
   },
 
@@ -196,7 +202,9 @@ export default {
 
       this.selectSubstate('galeria')
 
-      this.$refs.galeria.createGallery(fotos, legendas)
+      var path = (this.state == 'um-projeto') ? store.get('pGalleryPath') : store.get('uGalleryPath')
+
+      this.$refs.galeria.createGallery(fotos, legendas, path)
 
     },
 

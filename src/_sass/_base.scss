@@ -185,16 +185,27 @@ body {
         }
       }
     }
+
+    &.is-uc {
+      img {
+        height: auto;
+        max-width: 80%;
+        max-height: none;
+      }
+    }
   }
 
   .single-projeto-content {
     height: 400px;
-    margin: 10px 0 60px;
+    margin: 10px 0 80px;
+    &.is-uc {
+      height: 540px;
+    }
   }
   
   .content-main {
     line-height: 1.5em;
-    text-align: right;
+    //text-align: right;
     position: relative;
   }
 
@@ -230,7 +241,7 @@ body {
   }
 
   .single-projeto-vis-selector {
-    padding: 0 60px;
+    padding: 0 120px;
   }
 
   .vis-opt {

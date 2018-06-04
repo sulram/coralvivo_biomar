@@ -18,38 +18,28 @@
       </div>
     </div>
 
-    <div class="single-projeto-marcas columns">
-      <div class="tab column is-narrow" v-if="content.proponentes">
-        <p v-if="content.proponentes.length == 1">Proponente</p>
-        <p v-if="content.proponentes.length > 1">Proponentes</p>
-        <img v-for="(item, index) in content.proponentes" v-bind:src="logoPath + content.proponentes[index]">
-      </div>
-      <div class="tab column is-narrow" v-if="content.patrocinio">
-        <p>Patrocínio</p>
-        <img v-for="(item, index) in content.patrocinio" v-bind:src="logoPath + content.patrocinio[index]">
-      </div>
-    </div>
+    <div style="height: 20px;"></div>
 
-    <div class="single-projeto-content columns">
+    <div class="single-projeto-content is-uc columns">
 
       <div class="content-main column is-8">
         
         <transition name="fade">
-          <div class="content-main-page" v-if="state === 'sobre'" v-html="content.sobre"></div>
+          <div class="content-main-page" v-if="state === 'sobre'" v-html="content.sobre" style="font-size: 14px;"></div>
         </transition>
 
         <transition name="fade">
-          <div class="content-main-page" v-if="state === 'resultados'" v-html="content.resultados"></div>
-        </transition>
-
-        <transition name="fade">
-          <div class="content-main-page" v-if="state === 'colaboradores'">
-            content.colaboradores
+          <div class="content-main-page" v-if="state === 'informacoes'">
+            <div style="height:40px;"></div>
+            <p v-for="(value, prop) in content.informacoes" style="margin-bottom:10px;">
+              <strong class="is-uppercase is-size-7">{{ labels[prop] }}</strong><br><span v-html="value"></span>
+            </p>
           </div>
         </transition>
 
         <transition name="fade">
           <div class="content-main-page" v-if="state === 'contato'">
+            <div style="height:40px;"></div>
             <p v-for="(value, prop) in content.contatos" style="margin-bottom:10px;"><strong class="is-uppercase is-size-7">{{ labels[prop] }}</strong><br>{{value}}</p>
           </div>
         </transition>
@@ -58,10 +48,18 @@
 
       <div class="content-nav column is-4 has-text-centered">
         
+        <div class="single-projeto-marcas is-uc">
+          <div class="tab" v-if="content.orgaogestor">
+            <p>Órgão Gestor</p>
+            <img v-bind:src="logoPath + content.orgaogestor">
+          </div>
+        </div>
+
+        <div style="height:40px;"></div>
+
         <ul>
           <li><a v-on:click="selectTab('sobre')">Sobre</a></li>
-          <li><a v-on:click="selectTab('resultados')">Resultados</a></li>
-          <!-- <li><a v-on:click="selectTab('colaboradores')">Colaboradores</a></li> -->
+          <li><a v-on:click="selectTab('informacoes')">Informações</a></li>
           <li><a v-on:click="selectTab('contato')">Contato</a></li>
         </ul>
 
@@ -118,7 +116,13 @@
           content: null,
           state: 'sobre',
           labels: {
+              nomecompleto: "Nome da Unidade",
+              uf: "Unidade Federal",
+              doc: "Data e Documento de criação",
+              orgao: "Órgão Gestor",
+              area: "Área em hectares",
               site: "Site",
+              endereco: "Endereço",
               email: "E-mail",
               telefone: "Telefone",
               facebook: "Facebook",
@@ -160,7 +164,7 @@
 
       computed: {
         thumb() {
-          return store.get('pGalleryPath') + this.content.fotos[0]
+          return store.get('uGalleryPath') + this.content.fotos[0]
         },
 
         logoPath() {

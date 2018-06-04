@@ -1899,14 +1899,19 @@ body {
     margin-right: 12px; }
     .single-projeto .single-projeto-marcas .tab img:last-child {
       margin-right: 0; }
+  .single-projeto .single-projeto-marcas.is-uc img {
+    height: auto;
+    max-width: 80%;
+    max-height: none; }
 
 .single-projeto .single-projeto-content {
   height: 400px;
-  margin: 10px 0 60px; }
+  margin: 10px 0 80px; }
+  .single-projeto .single-projeto-content.is-uc {
+    height: 540px; }
 
 .single-projeto .content-main {
   line-height: 1.5em;
-  text-align: right;
   position: relative; }
 
 .single-projeto .content-main-page {
@@ -1929,7 +1934,7 @@ body {
     font-weight: 700; }
 
 .single-projeto .single-projeto-vis-selector {
-  padding: 0 60px; }
+  padding: 0 120px; }
 
 .single-projeto .vis-opt {
   transition: transform 0.6s ease;
