@@ -31,6 +31,7 @@ export default {
         mapTypeId: google.maps.MapTypeId.HYBRID,
         disableDefaultUI: true,
         minZoom: 3,
+        backgroundColor: '#1b2b60',
         //zoomControl: true,
         //zoomControlOptions: {
         //  position: google.maps.ControlPosition.LEFT_BOTTOM
