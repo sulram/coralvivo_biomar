@@ -13,10 +13,10 @@ const isDevMode = process.execPath.match(/[\\/]electron/);
 global.store = new Store({
   configName: 'settings',
   defaults: process.platform == "win32" ? {
-      "dataPath": "D:/Documentos/GitHub/coralvivo_biomar/data/",
-      "pGalleryPath": "D:/CORALVIVO_FILES/FOTOS_PROJETOS/",
-      "uGalleryPath": "D:/CORALVIVO_FILES/FOTOS_UCS/",
-      "sGalleryPath": "D:/CORALVIVO_FILES/FOTOS__SAVER/",
+      "dataPath": "C:/Users/u/Documents/GitHub/coralvivo_biomar/data/",
+      "pGalleryPath": "C:/CORALVIVO_FILES/FOTOS_PROJETOS/",
+      "uGalleryPath": "C:/CORALVIVO_FILES/FOTOS_UCS/",
+      "sGalleryPath": "C:/CORALVIVO_FILES/FOTOS__SAVER/",
 
       "screensaver_seconds": 120
   }
@@ -38,7 +38,7 @@ const createWindow = async () => {
   mainWindow = new BrowserWindow({
     width: 1920,
     height: 1080,
-    //kiosk: true
+    kiosk: true
   });
 
   mainWindow.setMenu(null);

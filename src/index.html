@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>coralvivo_biomar</title>
     <link rel="stylesheet" href="css/cinzel-black/font.css">
     <link rel="stylesheet" href="css/josefin-sans/font.css">
@@ -21,6 +22,11 @@
     import Vue from 'vue'
     import yaml from 'js-yaml'
     import MainApp from './scripts/main'
+    
+    import { webFrame } from 'electron'
+    //webFrame.setZoomLevelLimits(1,1)
+    webFrame.setVisualZoomLevelLimits(1,1)
+    webFrame.setLayoutZoomLevelLimits(0,0)
 
     const store = require('electron').remote.getGlobal('store');
     const app = new Vue(MainApp).$mount('#app')
