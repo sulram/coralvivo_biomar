@@ -91,7 +91,7 @@
           <projeto
             v-on:backToMenu="backToMenu"
             v-on:createGallery="createGallery"
-            v-on:closeGallery="closeGallery"
+            v-on:focusArea="focusArea"
             v-bind:arquivo="contentIndex['um-projeto'][selecionado].arquivo"
           ></projeto>
         </div>
@@ -104,7 +104,7 @@
           <unidade
               v-on:backToMenu="backToMenu"
               v-on:createGallery="createGallery"
-              v-on:closeGallery="closeGallery"
+              v-on:focusArea="focusArea"
               v-bind:arquivo="contentIndex['uma-uc'][selecionado].arquivo"
           ></unidade>
         </div>
@@ -201,6 +201,7 @@ export default {
       this.substate = 'area'
       this.tab = 'about'
       this.selecionado = val
+      this.focusArea()
       console.log(val)
     },
 
@@ -209,7 +210,15 @@ export default {
       this.substate = 'area'
       this.tab = 'sobre'
       this.selecionado = val
+      this.focusArea()
       console.log(val)
+    },
+
+    focusArea(){
+      if(this.substate == 'galeria'){
+        this.closeGallery()
+      }
+      this.$refs.maps.focusArea(this.contentIndex[this.state][this.selecionado].geodata)
     },
 
     createGallery(fotos, legendas) {
@@ -221,6 +230,7 @@ export default {
       var path = (this.state == 'um-projeto') ? store.get('pGalleryPath') : store.get('uGalleryPath')
 
       this.$refs.galeria.createGallery(fotos, legendas, path)
+      //this.$refs.maps.unfocusArea()
 
     },
 
@@ -239,6 +249,11 @@ export default {
       // check if gallery is open
       if(this.substate == 'galeria'){
         this.$refs.galeria.closeGallery()
+      }
+
+      // check if area is focused
+      if(this.substate == 'area'){
+        this.$refs.maps.unfocusArea()
       }
 
       // change substates

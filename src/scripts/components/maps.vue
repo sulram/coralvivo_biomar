@@ -10,7 +10,10 @@ export default {
   data () {
     return {
       map: null,
-      strictBounds: null
+      strictBounds: null,
+      kmlLayer: null,
+      initial_location: {lat: -13, lng: -37},
+      initial_zoom: 5
     }
   },
 
@@ -22,11 +25,9 @@ export default {
 
     buildMap(){
 
-      var initial_location = {lat: -13, lng: -37};
-
       this.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 5,
-        center: initial_location,
+        zoom: this.initial_zoom,
+        center: this.initial_location,
         mapTypeId: google.maps.MapTypeId.HYBRID,
         disableDefaultUI: true,
         minZoom: 3,
@@ -113,7 +114,47 @@ export default {
         if (y > maxY) y = maxY;
 
         this.map.setCenter(new google.maps.LatLng(y, x));
+    },
+
+    removeKmlLayer() {
+      if(this.kmlLayer){
+        this.kmlLayer.setMap(null)
+        this.kmlLayer = null
+      }
+    },
+
+    unfocusArea() {
+      
+      this.removeKmlLayer()
+
+      this.map.setZoom(this.initial_zoom)
+      this.map.panTo(this.initial_location)
+
+    },
+
+    focusArea(file){
+
+      this.removeKmlLayer()
+      
+      this.kmlLayer = new google.maps.KmlLayer({
+        url: "http://host.marlus.com/coralvivo/kmz/" + file,
+        suppressInfoWindows: true,
+        preserveViewport: true,
+        map: this.map
+      })
+
+      var that = this
+      setTimeout(function(){that.zoomArea()}, 2000)
+
+      console.log(["focusArea: " + file, this.kmlLayer])
+
+    },
+
+    zoomArea() {
+      var bounds = this.kmlLayer.getDefaultViewport();
+      this.map.fitBounds(bounds);
     }
+
   }
 
 }

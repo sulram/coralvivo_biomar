@@ -167,7 +167,7 @@
 
         focusArea() {
           
-          this.$emit('closeGallery')
+          this.$emit('focusArea')
 
         }
 
