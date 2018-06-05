@@ -1,12 +1,11 @@
-nome: Toyota Costa dos corais
+nome: Toyota<br>Costa dos corais
 
 desde: 2011
 
-logo: p-costa-dos-corais.png
+#logo: p-costa-dos-corais.png
 
 proponentes:
   - prop-sosma.png
-  - prop-icmbio.png
 
 patrocinio:
   - patro-toyota.png

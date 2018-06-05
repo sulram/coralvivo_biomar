@@ -20,14 +20,14 @@ um-projeto:
     arquivo: p-tamar.yml
     geodata: p-tamar.kmz
 
-  - nome: Atol das Rocas
-    arquivo: p-atol-das-rocas.yml
-    geodata: p-atol-das-rocas.kmz
-
   - nome: Conduta Consciente
     arquivo: p-conduta-consciente.yml
     geodata: p-conduta-consciente.kmz
 
+  - nome: Fundo Atol das Rocas
+    arquivo: p-atol-das-rocas.yml
+    geodata: p-atol-das-rocas.kmz
+    
   - nome: Ilhas do Rio
     arquivo: p-ilhas-do-rio.yml
     geodata: p-ilhas-do-rio.kmz
