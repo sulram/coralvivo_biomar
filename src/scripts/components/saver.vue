@@ -3,6 +3,9 @@
   <div v-if="images">
     <div class="slideshow">
       <div class="slideshow-image" v-for="(item, index) in images" v-bind:style="{ 'background-image': 'url(\'' + images[index] + '\')' }"></div>
+
+      <img class="screensaver-touch" src="img/screensaver-touch.svg">
+
     </div>
   </div>
 

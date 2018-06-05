@@ -2079,6 +2079,13 @@ a[href^="https://maps.google.com/maps"] {
   height: 100vh;
   overflow: hidden; }
 
+.screensaver-touch {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -280px;
+  z-index: 20; }
+
 .slideshow-image {
   position: absolute;
   width: 100%;
@@ -2089,7 +2096,7 @@ a[href^="https://maps.google.com/maps"] {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-duration: 60s;
-  opacity: 1;
+  opacity: 0;
   transform: scale(1.15); }
   .slideshow-image:nth-child(1) {
     animation-name: kenburns-1;
