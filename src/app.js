@@ -15,19 +15,17 @@ global.store = new Store({
   configName: 'settings',
   defaults: process.platform == "win32" ? {
       "dataPath": "D:/Documentos/GitHub/coralvivo_biomar/data/",
-      "pGalleryPath": "D:/CORALVIVO_BIOMAR_FILES/FOTOS_PROJETOS/",
-      "uGalleryPath": "D:/CORALVIVO_BIOMAR_FILES/FOTOS_UCS/",
-      "pGeoPath": "D:/CORALVIVO_BIOMAR_FILES/KMZ_PROJETOS/",
-      "uGeoPath": "D:/CORALVIVO_BIOMAR_FILES/KMZ_UCS/",
+      "pGalleryPath": "D:/CORALVIVO_FILES/FOTOS_PROJETOS/",
+      "uGalleryPath": "D:/CORALVIVO_FILES/FOTOS_UCS/",
+      "sGalleryPath": "D:/CORALVIVO_FILES/FOTOS__SAVER/",
 
       "screensaver_seconds": 100
   }
   : {
-      "dataPath": "/Users/marlus/Documents/coralvivo_biomar/data/",
-      "pGalleryPath": "/Users/marlus/Documents/CORALVIVO_FILES/FOTOS_PROJETOS/",
-      "uGalleryPath": "/Users/marlus/Documents/CORALVIVO_FILES/FOTOS_UCS/",
-      "pGeoPath": "/Users/marlus/Documents/CORALVIVO_FILES/KMZ_PROJETOS/",
-      "uGeoPath": "/Users/marlus/Documents/CORALVIVO_FILES/KMZ_UCS/",
+      "dataPath": "/Users/Marlus/Documents/coralvivo_biomar/data/",
+      "pGalleryPath": "/Users/Marlus/Documents/CORALVIVO_FILES/FOTOS_PROJETOS/",
+      "uGalleryPath": "/Users/Marlus/Documents/CORALVIVO_FILES/FOTOS_UCS/",
+      "sGalleryPath": "/Users/Marlus/Documents/CORALVIVO_FILES/FOTOS__SAVER/",
 
       "screensaver_seconds": 120
   }
