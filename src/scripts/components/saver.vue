@@ -28,7 +28,7 @@
         var _images = []
 
         yaml.safeLoad(fs.readFileSync(store.get('dataPath') + 'saver.yml', 'utf8')).fotos.map(function(el,i){
-          _images.push(store.get('pGalleryPath') + el)
+          _images.push(store.get('sGalleryPath') + el)
         })
 
         function shuffle(a) {
@@ -39,7 +39,7 @@
           return a;
         }
 
-        this.images = shuffle(_images)
+        this.images = shuffle(_images).slice(0,10)
 
       },
 
@@ -69,10 +69,6 @@
       },
 
       computed: {
-        
-        imgPath() {
-          return store.get('pGalleryPath')
-        },
 
       }
   }

@@ -1,7 +1,7 @@
-$items: 5;
-$animation-time: 4s;
+$items: 10;
+$animation-time: 6s;
 $transition-time: .5s;
-$scale: 20%;
+$scale: 15%;
 
 $total-time: ($animation-time * $items);
 $scale-base-1: (1 + $scale / 100%);

@@ -10,7 +10,6 @@ let mainWindow;
 
 const isDevMode = process.execPath.match(/[\\/]electron/);
 
-global.screensaver_seconds = 120;
 global.store = new Store({
   configName: 'settings',
   defaults: process.platform == "win32" ? {
@@ -19,7 +18,7 @@ global.store = new Store({
       "uGalleryPath": "D:/CORALVIVO_FILES/FOTOS_UCS/",
       "sGalleryPath": "D:/CORALVIVO_FILES/FOTOS__SAVER/",
 
-      "screensaver_seconds": 100
+      "screensaver_seconds": 120
   }
   : {
       "dataPath": "/Users/Marlus/Documents/coralvivo_biomar/data/",
