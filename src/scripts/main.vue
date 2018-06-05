@@ -13,7 +13,7 @@
 
     <!-- MAPS -->
 
-    <maps ref="maps"></maps>
+    <maps ref="maps" v-on:mapChanged="screensaverClearTimer"></maps>
 
     <!-- PANEL -->
 

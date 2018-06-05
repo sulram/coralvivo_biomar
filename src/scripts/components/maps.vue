@@ -90,6 +90,7 @@ export default {
 
       // Listen for the dragend event
       google.maps.event.addListener(this.map, 'dragend', this.mapDragEnd);
+      google.maps.event.addListener(this.map, 'zoom_changed', this.mapChanged);
 
     },
 
@@ -115,6 +116,15 @@ export default {
         if (y > maxY) y = maxY;
 
         this.map.setCenter(new google.maps.LatLng(y, x));
+
+        this.mapChanged()
+
+    },
+
+    mapChanged() {
+      
+      this.$emit('mapChanged')
+
     },
 
     removeKmlLayer() {
