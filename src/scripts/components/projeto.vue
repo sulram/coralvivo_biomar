@@ -4,14 +4,12 @@
     
     <div class="single-projeto-header columns is-vcentered has-text-centered">
       <div class="column">
-        <div class="title">
-          {{content.nome}}
-        </div>
+        <div class="title" v-html="content.nome"></div>
         <div class="desde fancy">
           <span>desde {{ content.desde }}</span>
         </div>
       </div>
-      <div class="column is-narrow">
+      <div class="column is-narrow" v-if="content.logo">
         <div class="marca">
           <img v-bind:src="logo" height="120">
         </div>

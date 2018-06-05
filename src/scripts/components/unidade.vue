@@ -4,9 +4,7 @@
     
     <div class="single-projeto-header columns is-vcentered has-text-centered">
       <div class="column">
-        <div class="title">
-          {{content.nome}}
-        </div>
+        <div class="title" v-html="content.nome"></div>
         <div class="desde fancy">
           <span>desde {{ content.desde }}</span>
         </div>

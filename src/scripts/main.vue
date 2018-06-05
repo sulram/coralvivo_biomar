@@ -142,54 +142,80 @@ export default {
   },
 
   components: {
+
     saver: saver,
     galeria: galeria,
     projeto: projeto,
     unidade: unidade,
     maps: maps
+
   },
 
   mounted: function(){
+
   	console.log("app mounted")
     this.screensaverStartTimer()
+
   },
 
   methods: {
 
     checkData() {
+      
       console.log('index',this.contentIndex)
+
     },
 
     screensaverStartTimer() {
+      
       this.screensaver_interval = setInterval(this.screensaverCountDown, 1000);
+
     },
 
     screensaverStopTimer() {
+      
       clearInterval(this.screensaver_interval)
       this.screensaver_interval = null
       this.screensaver_counter = 0
+
     },
 
     screensaverClearTimer() {
+
       this.screensaver_counter = 0
+
       console.log('screensaverClearTimer()')
+
       if(this.state == 'saver'){
         this.state = 'index'
         this.substate = 'lista-projetos'
         this.screensaverStartTimer()
       }
+
     },
 
     screensaverCountDown() {
+
       this.screensaver_counter++
+
       console.log(this.screensaver_counter)
+
       if(this.screensaver_counter >= this.screensaver_seconds){
-        if(this.substate == 'galeria')
+
+        if(this.substate == 'galeria'){
           this.$refs.galeria.closeGallery()
+        }
+
+        if(this.substate == 'area'){
+          this.$refs.maps.unfocusArea()
+        }
+
         this.state = 'saver'
         this.substate = null
         this.screensaverStopTimer()
+
       }
+
     },
 
     selectSubstate(val) {
@@ -262,6 +288,7 @@ export default {
       this.tab = null
       // change state
       this.state = 'index'
+      
     }
   }
 }
