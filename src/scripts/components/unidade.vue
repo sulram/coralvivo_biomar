@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div style="height: 20px;"></div>
+    <div style="height: 10px;"></div>
 
     <div class="single-projeto-content is-uc columns">
 
