@@ -236,7 +236,7 @@ body {
     &.is-uc {
       img {
         height: auto;
-        max-width: 80%;
+        max-width: 70%;
         max-height: none;
       }
     }
@@ -246,7 +246,8 @@ body {
     height: 400px;
     margin: 10px 0 60px;
     &.is-uc {
-      height: 530px;
+      height: auto;
+      max-height: 530px;
     }
   }
   
