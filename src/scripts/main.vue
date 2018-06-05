@@ -278,9 +278,9 @@ export default {
       }
 
       // check if area is focused
-      if(this.substate == 'area'){
-        this.$refs.maps.unfocusArea()
-      }
+      //if(this.substate == 'area'){
+      this.$refs.maps.unfocusArea()
+      //}
 
       // change substates
       this.substate = this.state === 'um-projeto' ? 'lista-projetos' : 'lista-ucs'
