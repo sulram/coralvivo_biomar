@@ -22,7 +22,7 @@ um-projeto:
 
   - nome: Conduta Consciente
     arquivo: p-conduta-consciente.yml
-    geodata: p-conduta-consciente.kmz
+    geodata: p-conduta-consciente-2.kmz
 
   - nome: Fundo Atol das Rocas
     arquivo: p-atol-das-rocas.yml
