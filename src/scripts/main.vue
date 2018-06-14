@@ -206,9 +206,8 @@ export default {
           this.$refs.galeria.closeGallery()
         }
 
-        if(this.substate == 'area'){
-          this.$refs.maps.unfocusArea()
-        }
+        // always unfocus map
+        this.$refs.maps.unfocusArea()
 
         this.state = 'saver'
         this.substate = null
