@@ -57,12 +57,12 @@
 
         <ul>
           <li>
-            <a v-on:click="selectTab('sobre')">Sobre</a>
-            <img src="img/coraline.svg" class="line" v-bind:class="{ active: state === 'sobre' }">
-          </li>
-          <li>
             <a v-on:click="selectTab('informacoes')">Informações</a>
             <img src="img/coraline.svg" class="line" v-bind:class="{ active: state === 'informacoes' }">
+          </li>
+          <li>
+            <a v-on:click="selectTab('sobre')">Sobre</a>
+            <img src="img/coraline.svg" class="line" v-bind:class="{ active: state === 'sobre' }">
           </li>
           <li>
             <a v-on:click="selectTab('contato')">Contato</a>
@@ -123,7 +123,7 @@
     data () {
         return {
           content: null,
-          state: 'sobre',
+          state: 'informacoes',
           labels: {
               nomecompleto: "Nome da Unidade",
               uf: "Unidade Federal",
